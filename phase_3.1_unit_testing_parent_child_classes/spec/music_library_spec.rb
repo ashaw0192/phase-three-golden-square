@@ -21,13 +21,5 @@ RSpec.describe MusicLibrary do
     music_library.add(track2)
     expect(music_library.search("keyword")).to eq [track1]
   end
-
-  it "searches by artist" do
-    music_library = MusicLibrary.new
-    track1 = double :track, matches?: true
-    track2 = double :track, matches?: false
-    music_library.add(track1)
-    music_library.add(track2)
-    expect(music_library.search("keyword")).to eq [track1]
-  end
+  
 end
